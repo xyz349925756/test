@@ -1,8 +1,7 @@
 name: Build and Push Docker Image
 on:
   issues:
-    types:
-      - opened
+    types: [opened]
 
 steps:
   - name: Checkout
