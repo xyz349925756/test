@@ -1,0 +1,79 @@
+name: 反馈问题
+description: 反馈您在使用本项目遇到的问题给我们.
+labels: ['bug',]
+title: '[报告:]<title>'
+assignees: 
+  - 'xyz349925756'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您的反馈，我们将尽快处理。
+  
+  - type: input
+    id: email
+    attributes:
+      label: 电子邮箱
+      description: 请输入您的电子邮箱,方便我们更好的给你反馈.
+      placeholder: abc@xx.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 问题描述
+      description: 请在此处输入您的问题,请从如何发生的,频次,日志等方面描述问题。
+      placeholder: 请详细描述您的问题
+      value: 请按照上面要求描述您的问题
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: 版本
+      description: 请选择您的问题类型
+
+      options:
+        - value: 1
+          text: 1.0
+        - value: 2
+          text: 2.0
+        - value: 3
+          text: 3.0
+        - value: 4
+          text: 4.0
+        - value: 5
+          text: 5.0
+        - value: 6
+          text: 6.0
+        - value: 7
+          text: 7.0
+        - value: 8
+          text: 8.0
+        - value: 9
+          text: 9.0
+        - value: 10
+          text: 10.0
+      default: -1
+    validations:
+      required: true
+
+  - type: textarea
+    id: shell
+    attributes:
+      label: 操作代码
+      description: 请在此处输入您的代码
+      render: 'shell'
+
+
+  - type: checkboxes
+    id: tag
+    attributes:
+      label: 反馈协议
+      description: 请选择您感兴趣的标签
+      options:
+        - label: 我同意
+          required: true
+          
