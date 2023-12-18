@@ -20,45 +20,45 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: content
-    attributes:
-      label: 问题描述
-      description: 请在此处输入您的问题,请从如何发生的,频次,日志等方面描述问题。
-      placeholder: 请详细描述您的问题
-      value: 请按照上面要求描述您的问题
-    validations:
-      required: true
+  # - type: textarea
+  #   id: content
+  #   attributes:
+  #     label: 问题描述
+  #     description: 请在此处输入您的问题,请从如何发生的,频次,日志等方面描述问题。
+  #     placeholder: 请详细描述您的问题
+  #     value: 请按照上面要求描述您的问题
+  #   validations:
+  #     required: true
 
-  - type: dropdown
-    id: version
-    attributes:
-      label: 版本
-      description: 请选择您的问题类型
+  # - type: dropdown
+  #   id: version
+  #   attributes:
+  #     label: 版本
+  #     description: 请选择您的问题类型
 
-      options:
-        - value: 1
-          text: 1.0
-        - value: 2
-          text: 2.0
-      default: 0
-    validations:
-      required: true
+  #     options:
+  #       - value: 1
+  #         text: 1.0
+  #       - value: 2
+  #         text: 2.0
+  #     default: 0
+  #   validations:
+  #     required: true
 
-  - type: textarea
-    id: shell
-    attributes:
-      label: 操作代码
-      description: 请在此处输入您的代码
-      render: 'shell'
+  # - type: textarea
+  #   id: shell
+  #   attributes:
+  #     label: 操作代码
+  #     description: 请在此处输入您的代码
+  #     render: 'shell'
 
 
-  - type: checkboxes
-    id: tag
-    attributes:
-      label: 反馈协议
-      description: 请选择您感兴趣的标签
-      options:
-        - label: 我同意
-          required: true
+  # - type: checkboxes
+  #   id: tag
+  #   attributes:
+  #     label: 反馈协议
+  #     description: 请选择您感兴趣的标签
+  #     options:
+  #       - label: 我同意
+  #         required: true
           
