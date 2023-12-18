@@ -1,38 +1,38 @@
-name: Bug Report                   # name bug反馈  
-description: File a bug report     # 这是一个bug反馈
-title: "[Bug]: "                   # 标题  bug
+name: Bug 反馈                  # name bug反馈  
+description: 这是BUG反馈issue表单     # 这是一个bug反馈
+title: "[标题]: "                   # 标题  bug
 labels: ["bug", "triage"]          # 标签
 projects: ["octo-org/1", "octo-org/44"]        # project
 assignees:                         # 代理人
-  - octocat
+  - xyz349925756
   # 上面是描述这个yaml的一些信息,下面才是主体部分.
 body:                              # 主体
   - type: markdown  # markdown 类型
     attributes:     # 属性
       value: |      # 多行文本
-        Thanks for taking the time to fill out this bug report!
+        感谢您百忙之中抽空反馈产品bug,相信有您的反馈,会让我们的产品更加稳健.
   - type: input     # input 类型
     id: contact     # 标识 input 唯一性
     attributes:     # 属性
-      label: Contact Details    # 简述
-      description: How can we get in touch with you if we need more info?   # 上下文指导
-      placeholder: ex. email@example.com    # 当input空白的时候 提示文字
+      label: 请留下您的联系方式    # 简述
+      description: 为了更好的服务,请留下您的联系方式   # 上下文指导
+      placeholder: 请留下你的E-mail    # 当input空白的时候 提示文字
     validations:          # 标识唯一性
-      required: false         # 表示并不是唯一
+      required: true         # 表示并不是唯一
   - type: textarea         # 多行文本
     id: what-happened      # 标识多行文本的唯一性
     attributes:            # 属性
-      label: What happened?        # 多行文本简述
-      description: Also tell us, what did you expect to happen?  # 上下文帮助
-      placeholder: Tell us what you see!    # 空白时候提示输入
-      value: "A bug happened!"        # 多行文本预填充的文本
+      label: 问题详细描述        # 多行文本简述
+      description: 请你填写出现此问题的详细信息  # 上下文帮助
+      placeholder:请详细描述你遇到的问题    # 空白时候提示输入
+      value: "请详细描述问题的起因或者复现条件"        # 多行文本预填充的文本
     validations:         # 标识多行文本是这个表单唯一的
       required: true
   - type: dropdown        # 下拉列表
     id: version           # 标识下拉列表唯一性
     attributes:           # 属性
-      label: Version      # 简述
-      description: What version of our software are you running?   # 上下文描述
+      label: 版本      # 简述
+      description: 你遇到的问题实在那个版本中发现的?   # 上下文描述
       options:                # 选项阵列
         - 1.0.2 (Default)    
         - 1.0.3 (Edge)
@@ -42,7 +42,7 @@ body:                              # 主体
   - type: dropdown       # 下拉列表
     id: browsers         # 标识唯一性
     attributes:          # 属性
-      label: What browsers are you seeing the problem on?  # 简述
+      label: 浏览器  # 简述
       multiple: true       # 确定用户是否可以多选
       options:            # 选项阵列
         - Firefox
@@ -52,16 +52,16 @@ body:                              # 主体
   - type: textarea          # 多行文本
     id: logs                # 标识logs是表单唯一
     attributes:             # 属性  
-      label: Relevant log output      # 简述
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.   
+      label: 使用的代码     # 简述
+      description: 请详细描述你遇到的问题.   
       # 上下文指导
       render: shell     # 多行文本格式化为shell
   - type: checkboxes       # 复选框
     id: terms              # 标识复选框唯一性
     attributes:             
-      label: Code of Conduct        # 简述
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)   # 上下文指导
+      label: 同意反馈协议        # 简述
+      description: 遵循本网站协议 [cloudb.pub](https://cloudb.pub)   # 上下文指导
       options:           # 选项
-        - label: I agree to follow this project's Code of Conduct  
+        - label: 我同意  
         # 简述复选框内容
           required: true
