@@ -1,10 +1,7 @@
 name: "bug 反馈"              
 description: "这是一个bug反馈表单"   
 title: 
-  - type: markdown
-    attributes:
-      value: |
-        请填写您的反馈内容        
+  value: "# bug反馈"     
 labels: ["bug",]          
   
 assignees:                         
