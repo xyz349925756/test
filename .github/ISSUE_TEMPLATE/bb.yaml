@@ -1,6 +1,6 @@
 name: "bug 反馈"              
 description: "这是一个bug反馈表单"   
-title: 
+title: ""
 labels: ["bug",]          
   
 assignees:                         
