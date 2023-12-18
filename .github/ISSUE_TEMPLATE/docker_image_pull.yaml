@@ -32,4 +32,4 @@ steps:
   - name: Close issue
     run: gh issue close ${{ github.event.issue.number }}
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.ISSUE_TOKEN }}
