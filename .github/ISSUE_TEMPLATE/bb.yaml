@@ -1,6 +1,15 @@
 name: "bug 反馈"              
 description: "这是一个bug反馈表单"   
-title: "bug反馈"   
+title: 
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      placeholder: bug title
+      description: "请输入标题"
+    validations:
+      required: true
+      
 labels: ["bug",]          
   
 assignees:                         
