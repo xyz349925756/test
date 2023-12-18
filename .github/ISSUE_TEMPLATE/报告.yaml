@@ -1,7 +1,9 @@
 name: 报告                  
 description: 报告问题模板   
 title: "[报告]: "                   
-labels: ["bug", "triage"]         
+labels: ["bug", "triage"]    
+projects:
+  -      
 assignees:                         
   - xyz349925756
 body:                             
