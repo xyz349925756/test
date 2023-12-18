@@ -1,13 +1,21 @@
-name: 报告                  
-description: 报告问题模板   
-title: "[报告]: "                   
-labels: ["bug", "triage"]    
-projects:
-  -      
-assignees:                         
-  - xyz349925756
-body:                             
-  - type: markdown  
-    attributes:    
-      value: |      
-        感谢您在百忙中抽空给我们反馈问题.
+name: Bug Report                   # name bug反馈  
+description: File a bug report     # 这是一个bug反馈
+title: "[Bug]: "                   # 标题  bug
+labels: ["bug", "triage"]          # 标签
+projects: ["octo-org/1", "octo-org/44"]        # project
+assignees:                         # 代理人
+  - octocat
+  # 上面是描述这个yaml的一些信息,下面才是主体部分.
+body:                              # 主体
+  - type: markdown  # markdown 类型
+    attributes:     # 属性
+      value: |      # 多行文本
+        Thanks for taking the time to fill out this bug report!
+  - type: input     # input 类型
+    id: contact     # 标识 input 唯一性
+    attributes:     # 属性
+      label: Contact Details    # 简述
+      description: How can we get in touch with you if we need more info?   # 上下文指导
+      placeholder: ex. email@example.com    # 当input空白的时候 提示文字
+    validations:          # 标识唯一性
+      required: false         # 表示并不是唯一
