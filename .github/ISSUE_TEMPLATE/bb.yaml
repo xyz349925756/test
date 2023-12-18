@@ -1,15 +1,15 @@
 name: "bug 反馈"              
 description: "这是一个bug反馈表单"   
-title: "[Bug]: "                 
-labels: ["bug", "triage"]          
-projects: ["octo-org/1", "octo-org/44"]       
+title: "[报告]: "                 
+labels: ["bug",]          
+  
 assignees:                         
   - xyz349925756
 body:                             
   - type: markdown  
     attributes:     
       value: |      
-        "感谢您百忙之中抽空给我们反馈bug，我们会尽快解决。"
+        感谢您百忙之中抽空给我们反馈bug，我们会尽快解决。
   - type: input    
     id: email     
     attributes:     
