@@ -15,8 +15,9 @@ jobs:
     - name: Extract Docker Image Name
       id: extract
       run: |
-        IMAGE_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=value: ).*')
-        echo "::set-output name=image::$IMAGE_NAME"
+        # IMAGE_NAME=$(echo '${{ github.event.issue.body }}' | grep -oP '(?<=value: ).*')
+        # echo "::set-output name=image::$IMAGE_NAME"
+        IMAGE_NAME=$(echo '${{ github.event.issue.body }}')
 
     - name: Pull Docker Image
       run: |
