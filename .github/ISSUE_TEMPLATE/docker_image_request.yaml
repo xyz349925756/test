@@ -10,7 +10,7 @@ body:
       value: |      
         请填写你需要拉取的镜像名称譬如 'k8s.gcr.io/pause:3.6'。
   - type: input    
-    id: image     
+    id: Name    
     attributes:     
       label: "请输入镜像名称"
       description: "必需是官网的镜像名称"
