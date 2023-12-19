@@ -15,6 +15,6 @@ body:
       label: "请输入镜像名称"
       description: "必需是官网的镜像名称"
       placeholder: "输入image名称"
-      value: k8s.gcr.io/pause:3.6
+      value: k8s.gcr.io/pause:3.6 >> IMAGE_NAME
     validations:          
       required: true
