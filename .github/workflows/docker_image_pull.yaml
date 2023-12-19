@@ -16,8 +16,8 @@ jobs:
       id: extract
       run: |
         title=$(echo '${{ github.event.issue.title }}') 
-        name=$(echo ${{ github.event.issue.body.title}})
-        name2=$(echo ${{ github.event.issue }})
+        name=$(echo ${{ github.event.issue.body }})
+        name2=$(echo ${{ github.event.issue.body }}.title )
 
         
        
