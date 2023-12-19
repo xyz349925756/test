@@ -15,8 +15,13 @@ jobs:
     - name: Extract Docker Image Name
       id: extract
       run: |
-        IMAGE_NAME=$(echo '${{ github.event.issue.body }}') | awk -F"### 请输入镜像名称\n|'" '{print $2}'
-        echo "::set-output name=image::$IMAGE_NAME"
+        # IMAGE_NAME=$(echo '${{ github.event.issue.body }}') | awk -F"### 请输入镜像名称\n|'" '{print $2}'
+        # echo "::set-output name=image::$IMAGE_NAME"
+        EVENT_NAME = ${{ github.event }}.title
+        echo "::set-output name=image::$(echo $EVENT_NAME | awk -F"### 请输入镜像名称\n|'" '{print $2}')"
+        
+
+
         
     - name: Pull Docker Image
       run: |
