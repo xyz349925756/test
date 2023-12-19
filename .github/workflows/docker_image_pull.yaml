@@ -16,7 +16,7 @@ jobs:
       id: extract
       run: |
         IMAGE_NAME=$(echo ${{ github.event.issue.body }} | grep -oP '(?<=value: ).*')
-        echo ${{ IMAGE_NAME }}
+        echo {{ IMAGE_NAME }}
         echo "::set-output name=image::$IMAGE_NAME"
 
         
