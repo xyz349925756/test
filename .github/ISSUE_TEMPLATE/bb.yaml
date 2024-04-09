@@ -1,6 +1,6 @@
 ---
 name: Custom File Creation
-about: Use this template to create a file in the repository.
+description: Use this template to create a file in the repository.
 title: "[FILE] "
 labels: file-creation
 assignees: ''
