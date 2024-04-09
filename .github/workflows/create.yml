@@ -1,21 +1,34 @@
-name: Create File Workflow
+name: Create File from Issue
 on:
   issues:
-    types:
-      - opened
+    types: [opened, edited]
 
 jobs:
   create-file:
     runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'new-file')
     steps:
-      - name: Checkout repository code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get issue details
+        id: issue
+        uses: actions/github-script@0.9.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const issue = context.payload.issue
+            const file_path = issue.body.match(/(?<=\bFile Path:\b)(.*)/)[0].trim()
+            const file_name = issue.body.match(/(?<=\bFile Name:\b)(.*)/)[0].trim()
+            const file_content = issue.body.match(/(?<=\bFile Content:\b)([\s\S]*?)(?=\n##|$)/)[0].trim()
+            core.setOutput('path', file_path)
+            core.setOutput('name', file_name)
+            core.setOutput('content', file_content)
 
       - name: Create file
         run: |
-          # Specify the folder path and file name
-          folder_path="fff"
-          file_name="example.txt"
-
-          # Create the file
-          touch "$folder_path/$file_name"
+          file_path=${{ steps.issue.outputs.path }}
+          file_name=${{ steps.issue.outputs.name }}
+          file_content="${{ steps.issue.outputs.content }}"
+          mkdir -p $file_path
+          echo "$file_content" > "$file_path/$file_name"
