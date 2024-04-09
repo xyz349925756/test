@@ -15,3 +15,17 @@ labels: file-creation
 
 ## File Content
 <!-- Please provide the content that should be included in the file -->
+
+body:                              # 主体
+  - type: markdown  # markdown 类型
+    attributes:     # 属性
+      value: |      # 多行文本
+        Thanks for taking the time to fill out this bug report!
+  - type: input     # input 类型
+    id: contact     # 标识 input 唯一性
+    attributes:     # 属性
+      label: Contact Details    # 简述
+      description: How can we get in touch with you if we need more info?   # 上下文指导
+      placeholder: ex. email@example.com    # 当input空白的时候 提示文字
+    validations:          # 标识唯一性
+      required: false         # 表示并不是唯一
