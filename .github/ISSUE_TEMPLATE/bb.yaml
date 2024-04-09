@@ -2,7 +2,7 @@ name: 'Create a New File'
 description: 'Use this template to create a new file in the repository.'
 title: 'New File: [FILE NAME]'
 labels: ['new-file']
-assignees: ''
+assignees: 'xyz349925756'
 
 body:
   - type: markdown
