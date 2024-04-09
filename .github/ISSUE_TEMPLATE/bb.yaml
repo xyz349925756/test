@@ -1,20 +1,17 @@
-name: "bug 反馈"              
-description: "这是一个bug反馈表单"   
-title: "反馈"
-labels: ["bug",]          
-  
-assignees:                         
-  - xyz349925756
-body:                             
-  - type: markdown  
-    attributes:     
-      value: |      
-        感谢您百忙之中抽空给我们反馈bug，我们会尽快解决。
-  - type: input    
-    id: email     
-    attributes:     
-      label: Email
-      description: "提供您的邮箱,我们会尽快联系您。"
-      placeholder: abc@xxx.com
-    validations:          
-      required: true
+---
+name: Custom File Creation
+about: Use this template to create a file in the repository.
+title: "[FILE] "
+labels: file-creation
+assignees: ''
+
+---
+
+## File Name
+<!-- Please specify the file name you want to create -->
+
+## File Location
+<!-- Please specify the folder path where the file should be created -->
+
+## File Content
+<!-- Please provide the content that should be included in the file -->
