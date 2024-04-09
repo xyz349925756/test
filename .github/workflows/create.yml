@@ -1,0 +1,21 @@
+name: Create File Workflow
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  create-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Create file
+        run: |
+          # Specify the folder path and file name
+          folder_path="fff"
+          file_name="example.txt"
+
+          # Create the file
+          touch "$folder_path/$file_name"
