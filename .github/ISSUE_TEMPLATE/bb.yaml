@@ -1,31 +1,37 @@
----
-name: Custom File Creation
-description: Use this template to create a file in the repository.
-title: "[FILE] "
-labels: file-creation
-# assignees: 'xyz349925756'
+name: 'Create a New File'
+description: 'Use this template to create a new file in the repository.'
+title: 'New File: [FILE NAME]'
+labels: ['new-file']
+assignees: ''
 
----
+body:
+  - type: markdown
+    attributes:
+      value: 'Please fill out the details below to create a new file.'
 
-## File Name
-<!-- Please specify the file name you want to create -->
+  - type: input
+    id: file_path
+    attributes:
+      label: 'File Path'
+      description: 'Enter the path where the new file should be created. For example, "folder/subfolder/"'
+      placeholder: 'folder/subfolder/'
+    validations:
+      required: true
 
-## File Location
-<!-- Please specify the folder path where the file should be created -->
+  - type: input
+    id: file_name
+    attributes:
+      label: 'File Name'
+      description: 'Enter the name of the new file, including the extension. For example, "example.txt"'
+      placeholder: 'example.txt'
+    validations:
+      required: true
 
-## File Content
-<!-- Please provide the content that should be included in the file -->
-
-body:                              # 主体
-  - type: markdown  # markdown 类型
-    attributes:     # 属性
-      value: |      # 多行文本
-        Thanks for taking the time to fill out this bug report!
-  - type: input     # input 类型
-    id: contact     # 标识 input 唯一性
-    attributes:     # 属性
-      label: Contact Details    # 简述
-      description: How can we get in touch with you if we need more info?   # 上下文指导
-      placeholder: ex. email@example.com    # 当input空白的时候 提示文字
-    validations:          # 标识唯一性
-      required: false         # 表示并不是唯一
+  - type: textarea
+    id: file_content
+    attributes:
+      label: 'File Content'
+      description: 'Enter the content that should be included in the new file.'
+      placeholder: 'Enter file content here...'
+    validations:
+      required: false
